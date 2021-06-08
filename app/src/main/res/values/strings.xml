@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">MovieJetpack</string>
+    <string name="title_activity_detail">DetailActivity</string>
+    <string name="text_title">Title</string>
+    <string name="overview">Overview</string>
+    <string name="desc_overview">Description Overview Here</string>
+    <string name="movies">Movies</string>
+    <string name="tv_shows">TV Shows</string>
+    <string name="rating">Rating</string>
+    <string name="genre">Genre</string>
+    <string name="desc_genre">Genre Here</string>
+    <string name="rating_num">5</string>
+    <string name="message_undo">Batalkan menghapus item sebelumnya?</string>
+    <string name="message_ok">OK</string>
+    <string name="deadline_date">Deadline %s</string>
+    <string name="share_text">Segera daftar kelas %s di dicoding.com</string>
+</resources>
