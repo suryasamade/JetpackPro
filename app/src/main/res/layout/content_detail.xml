@@ -18,7 +18,7 @@
         android:src="@color/teal_200"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="ContentDescription" />
+        tools:ignore="ContentDescription"/>
 
     <TextView
         android:id="@+id/text_title"
@@ -96,11 +96,31 @@
         app:layout_constraintTop_toBottomOf="@id/text_genre"
         app:layout_constraintEnd_toEndOf="parent"/>
 
+    <Button
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="?attr/colorPrimary"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/bookmark"
+        app:layout_constraintBottom_toBottomOf="@id/bookmark"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/bookmark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:src="@drawable/ic_bookmark"
+        android:backgroundTint="?attr/colorPrimary"
+        app:layout_constraintTop_toBottomOf="@id/img_poster"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
     <TextView
         android:id="@+id/text_overview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="18dp"
         android:text="@string/overview"
         android:textColor="@color/title"
         android:textSize="17sp"
@@ -108,7 +128,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/img_poster" />
+        app:layout_constraintTop_toBottomOf="@+id/bookmark" />
 
     <TextView
         android:id="@+id/overview"

@@ -5,19 +5,21 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.suryasa.moviejetpack.R
 import com.suryasa.moviejetpack.databinding.FragmentMoviesBinding
-import com.suryasa.moviejetpack.utils.DataDummy
 import com.suryasa.moviejetpack.viewmodel.ViewModelFactory
+import com.suryasa.moviejetpack.vo.Status
 
 class MoviesFragment : Fragment() {
-    private lateinit var fragmentMoviesBinding: FragmentMoviesBinding
+    private var _binding: FragmentMoviesBinding? = null
+    private val binding get() = _binding!!
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        fragmentMoviesBinding = FragmentMoviesBinding.inflate(layoutInflater, container, false)
-        return fragmentMoviesBinding.root
+        _binding = FragmentMoviesBinding.inflate(layoutInflater, container, false)
+        val view = binding.root
+        return view
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -25,21 +27,35 @@ class MoviesFragment : Fragment() {
         if (activity != null) {
             val factory = ViewModelFactory.getInstance(requireActivity())
             val viewModel = ViewModelProvider(this, factory)[MoviesViewModel::class.java]
+            val adapter = MoviesAdapter()
 
-            val movieAdapter = MoviesAdapter()
-
-            fragmentMoviesBinding.progressbar.visibility = View.VISIBLE
             viewModel.getMovies().observe(this, { movies ->
-                fragmentMoviesBinding.progressbar.visibility = View.GONE
-                movieAdapter.setMovies(movies)
-                movieAdapter.notifyDataSetChanged()
+                if (movies != null) {
+                    when (movies.status) {
+                        Status.LOADING -> binding?.progressbar?.visibility = View.VISIBLE
+                        Status.SUCCESS -> {
+                            binding?.progressbar?.visibility = View.GONE
+                            adapter.submitList(movies.data)
+                            adapter.notifyDataSetChanged()
+                        }
+                        Status.ERROR -> {
+                            binding?.progressbar?.visibility = View.GONE
+                            Toast.makeText(context, "Terjadi kesalahan", Toast.LENGTH_SHORT).show()
+                        }
+                    }
+                }
             })
 
-            with(fragmentMoviesBinding.rvMovie) {
-                layoutManager = LinearLayoutManager(context)
-                setHasFixedSize(true)
-                adapter = movieAdapter
+            with(binding.rvMovie) {
+                this.layoutManager = LinearLayoutManager(context)
+                this.setHasFixedSize(true)
+                this.adapter = adapter
             }
         }
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 }

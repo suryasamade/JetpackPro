@@ -1,14 +1,18 @@
 package com.suryasa.moviejetpack.data.source
 
 import androidx.lifecycle.LiveData
-import com.suryasa.moviejetpack.data.source.local.entity.ModelEntity
+import androidx.paging.PagedList
+import com.suryasa.moviejetpack.data.source.local.entity.MovieEntity
+import com.suryasa.moviejetpack.vo.Resource
 
 interface MovieDataSource {
-    fun getAllMovies(): LiveData<List<ModelEntity>>
+    fun getAllMovies(): LiveData<Resource<PagedList<MovieEntity>>>
 
-    fun getAllTvShows(): LiveData<List<ModelEntity>>
+    fun getMovieDetail(movieId: String): LiveData<Resource<MovieEntity>>
 
-    fun getMovieDetail(movieId: String): LiveData<ModelEntity>
+    fun setBookmarkMovie(movie: MovieEntity, state: Boolean)
 
-    fun getTvShowDetail(tvshowId: String): LiveData<ModelEntity>
+    fun getBookmarkMovies(): LiveData<PagedList<MovieEntity>>
+
+    fun checkBookmarkMovie(id: String): LiveData<Boolean>
 }

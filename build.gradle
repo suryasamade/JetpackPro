@@ -1,6 +1,6 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 buildscript {
-    ext.kotlin_version = "1.4.32"
+    ext.kotlin_version = "1.5.10"
     repositories {
         google()
         jcenter()
@@ -44,4 +44,7 @@ ext {
     glideVersion = '4.11.0'
 
     archLifecycleVersion = '2.2.0'
+    roomVersion = '2.2.5'
+    roomRuntimeVersion = '2.2.5'
+    pagingVersion = '2.1.2'
 }

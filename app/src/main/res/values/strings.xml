@@ -6,6 +6,8 @@
     <string name="desc_overview">Description Overview Here</string>
     <string name="movies">Movies</string>
     <string name="tv_shows">TV Shows</string>
+    <string name="detail_movie">Detail Movie</string>
+    <string name="detail_tv_show">Detail TV Show</string>
     <string name="rating">Rating</string>
     <string name="genre">Genre</string>
     <string name="desc_genre">Genre Here</string>
@@ -14,4 +16,7 @@
     <string name="message_ok">OK</string>
     <string name="deadline_date">Deadline %s</string>
     <string name="share_text">Segera daftar kelas %s di dicoding.com</string>
+    <string name="menu_bookmark">bookmark</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

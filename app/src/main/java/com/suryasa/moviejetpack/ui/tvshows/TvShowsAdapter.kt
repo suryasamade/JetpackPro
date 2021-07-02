@@ -1,20 +1,33 @@
-package com.suryasa.moviejetpack.ui.tvshows
+package com.suryasa.tvshowjetpack.ui.tvshows
 
 import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.paging.PagedListAdapter
+import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.suryasa.moviejetpack.R
-import com.suryasa.moviejetpack.data.source.local.entity.ModelEntity
+import com.suryasa.moviejetpack.data.source.local.entity.TvShowEntity
 import com.suryasa.moviejetpack.databinding.ItemsTvShowsBinding
 import com.suryasa.moviejetpack.ui.detail.DetailActivity
 
-class TvShowsAdapter : RecyclerView.Adapter<TvShowsAdapter.TvShowViewHolder>() {
-    private var listTvShows = ArrayList<ModelEntity>()
+class TvShowsAdapter : PagedListAdapter<TvShowEntity, TvShowsAdapter.TvShowViewHolder>(DIFF_CALLBACK) {
+    companion object {
+        private val DIFF_CALLBACK = object : DiffUtil.ItemCallback<TvShowEntity>() {
+            override fun areItemsTheSame(oldItem: TvShowEntity, newItem: TvShowEntity): Boolean {
+                return oldItem.id == newItem.id
+            }
 
-    fun setTvShows(tvShows: List<ModelEntity>?) {
+            override fun areContentsTheSame(oldItem: TvShowEntity, newItem: TvShowEntity): Boolean {
+                return oldItem == newItem
+            }
+        }
+    }
+    private var listTvShows = ArrayList<TvShowEntity>()
+
+    fun setTvShows(tvShows: List<TvShowEntity>?) {
         if (tvShows == null) return
         this.listTvShows.clear()
         this.listTvShows.addAll(tvShows)
@@ -22,28 +35,27 @@ class TvShowsAdapter : RecyclerView.Adapter<TvShowsAdapter.TvShowViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TvShowViewHolder {
         val itemsTvShowBinding = ItemsTvShowsBinding.inflate(LayoutInflater.from(parent.context), parent, false)
-        return TvShowsAdapter.TvShowViewHolder(itemsTvShowBinding)
+        return TvShowViewHolder(itemsTvShowBinding)
     }
 
     override fun onBindViewHolder(holder: TvShowViewHolder, position: Int) {
-        val movies = listTvShows[position]
-        holder.bind(movies)
+        getItem(position)?.let { holder.bind(it) }
     }
 
-    override fun getItemCount(): Int = listTvShows.size
+    fun getSwipedData(swipedPosition: Int): TvShowEntity? = getItem(swipedPosition)
 
     class TvShowViewHolder(private val binding: ItemsTvShowsBinding) : RecyclerView.ViewHolder(binding.root) {
-        fun bind(movie: ModelEntity) {
+        fun bind(tvshow: TvShowEntity) {
             with(binding) {
-                tvItemTitle.text = movie.title
-                tvItemOverview.text = movie.overview
+                tvItemTitle.text = tvshow.title
+                tvItemOverview.text = tvshow.overview
                 itemView.setOnClickListener {
                     val intent = Intent(itemView.context, DetailActivity::class.java)
-                    intent.putExtra(DetailActivity.EXTRA_DATA, movie.id)
+                    intent.putExtra(DetailActivity.EXTRA_DATA, tvshow.id)
                     itemView.context.startActivity(intent)
                 }
                 Glide.with(itemView.context)
-                    .load(movie.poster_url)
+                    .load(tvshow.posterUrl)
                     .apply(
                         RequestOptions.placeholderOf(R.drawable.ic_loading)
                         .error(R.drawable.ic_error))

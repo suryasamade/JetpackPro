@@ -9,7 +9,7 @@ import com.suryasa.moviejetpack.R
 import com.suryasa.moviejetpack.ui.movies.MoviesFragment
 import com.suryasa.moviejetpack.ui.tvshows.TvShowsFragment
 
-class SectionsPagerAdapter(private val mContext: Context, fm: FragmentManager) : FragmentPagerAdapter(fm, BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT) {
+class HomePagerAdapter(private val mContext: Context, fm: FragmentManager) : FragmentPagerAdapter(fm, BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT) {
     companion object {
         @StringRes
         private val TAB_TITLES = intArrayOf(R.string.movies, R.string.tv_shows)
@@ -24,5 +24,5 @@ class SectionsPagerAdapter(private val mContext: Context, fm: FragmentManager) :
 
     override fun getPageTitle(position: Int): CharSequence? = mContext.resources.getString(TAB_TITLES[position])
 
-    override fun getCount(): Int = 2
+    override fun getCount(): Int = TAB_TITLES.size
 }

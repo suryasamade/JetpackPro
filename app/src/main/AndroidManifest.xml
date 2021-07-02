@@ -3,8 +3,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.suryasa.moviejetpack">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
-
     <application
         android:allowBackup="false"
         android:icon="@mipmap/ic_launcher"
@@ -13,6 +11,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MovieJetpack"
         tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".ui.bookmark.BookmarkActivity"></activity>
         <activity
             android:name=".ui.detail.DetailActivity"
             android:label="@string/title_activity_detail"
@@ -20,7 +19,7 @@
             android:theme="@style/Theme.MovieJetpack.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".ui.home.HomeActivity"/>
+                android:value=".ui.home.HomeActivity" />
         </activity>
         <activity android:name=".ui.home.HomeActivity">
             <intent-filter>
@@ -30,5 +29,7 @@
             </intent-filter>
         </activity>
     </application>
+
+    <uses-permission android:name="android.permission.INTERNET" />
 
 </manifest>

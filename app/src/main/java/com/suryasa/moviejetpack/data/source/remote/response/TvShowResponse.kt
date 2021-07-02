@@ -4,11 +4,11 @@ import android.os.Parcelable
 import kotlinx.parcelize.Parcelize
 
 @Parcelize
-data class ModelResponse(
+data class TvShowResponse(
     var id: String,
     var title: String,
     var overview: String,
-    var poster_url: String,
+    var posterUrl: String,
     var genre: String,
     var rating: String
 ):Parcelable

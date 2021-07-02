@@ -4,7 +4,7 @@
       "id": "1416",
       "title": "Grey's Anatomy",
       "overview": "Follows the personal and professional lives of a group of doctors at Seattle’s Grey Sloan Memorial Hospital.",
-      "poster_url": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/ezHR68DZeyKgRraAZd3eGCgmIl.jpg",
+      "posterUrl": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/ezHR68DZeyKgRraAZd3eGCgmIl.jpg",
       "genre": "Drama",
       "rating": "8.2"
     },
@@ -12,7 +12,7 @@
       "id": "120168",
       "title": "Who Killed Sara?",
       "overview": "Hell-bent on exacting revenge and proving he was framed for his sister's murder, Álex sets out to unearth much more than the crime's real culprit.",
-      "poster_url": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/o7uk5ChRt3quPIv8PcvPfzyXdMw.jpg",
+      "posterUrl": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/o7uk5ChRt3quPIv8PcvPfzyXdMw.jpg",
       "genre": "Drama, Crime, Mystery",
       "rating": "7.8"
     },
@@ -20,7 +20,7 @@
       "id": "88396",
       "title": "The Falcon and the Winter Soldier",
       "overview": "Following the events of “Avengers: Endgame”, the Falcon, Sam Wilson and the Winter Soldier, Bucky Barnes team up in a global adventure that tests their abilities, and their patience.",
-      "poster_url": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/6kbAMLteGO8yyewYau6bJ683sw7.jpg",
+      "posterUrl": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/6kbAMLteGO8yyewYau6bJ683sw7.jpg",
       "genre": "Sci-Fi & Fantasy, Action & Adventure, Drama, War & Politics",
       "rating": "7.9"
     },
@@ -28,7 +28,7 @@
       "id": "60735",
       "title": "The Flash",
       "overview": "After a particle accelerator causes a freak storm, CSI Investigator Barry Allen is struck by lightning and falls into a coma. Months later he awakens with the power of super speed, granting him the ability to move through Central City like an unseen guardian angel. Though initially excited by his newfound powers, Barry is shocked to discover he is not the only \"meta-human\" who was created in the wake of the accelerator explosion -- and not everyone is using their new powers for good. Barry partners with S.T.A.R. Labs and dedicates his life to protect the innocent. For now, only a few close friends and associates know that Barry is literally the fastest man alive, but it won't be long before the world learns what Barry Allen has become...The Flash.",
-      "poster_url": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/lJA2RCMfsWoskqlQhXPSLFQGXEJ.jpg",
+      "posterUrl": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/lJA2RCMfsWoskqlQhXPSLFQGXEJ.jpg",
       "genre": "Drama, Sci-Fi & Fantasy",
       "rating": "7.7"
     },
@@ -36,7 +36,7 @@
       "id": "93484",
       "title": "Jupiter's Legacy",
       "overview": "When the world's first generation of superheroes received their powers in the 1930s become the revered elder guard in the present, their superpowered children struggle to live up to the legendary feats of their parents.",
-      "poster_url": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/9yxep7oJdkj3Pla9TD9gKflRApY.jpg",
+      "posterUrl": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/9yxep7oJdkj3Pla9TD9gKflRApY.jpg",
       "genre": "Sci-Fi & Fantasy, Action & Adventure, Drama, Mystery",
       "rating": "7.4"
     },
@@ -44,7 +44,7 @@
       "id": "105971",
       "title": "The Bad Batch",
       "overview": "Follow the elite and experimental Clones of the Bad Batch as they find their way in a rapidly changing galaxy in the aftermath of the Clone Wars.",
-      "poster_url": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/WjQmEWFrOf98nT5aEfUfVYz9N2.jpg",
+      "posterUrl": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/WjQmEWFrOf98nT5aEfUfVYz9N2.jpg",
       "genre": "Sci-Fi & Fantasy, Action & Adventure, Animation",
       "rating": "8.9"
     },
@@ -52,7 +52,7 @@
       "id": "46260",
       "title": "Naruto",
       "overview": "In another world, ninja are the ultimate power, and in the Village Hidden in the Leaves live the stealthiest ninja in the land. Twelve years earlier, the fearsome Nine-Tailed Fox terrorized the village and claimed many lives before it was subdued and its spirit sealed within the body of a baby boy. That boy, Naruto Uzumaki, has grown up to become a ninja-in-training who's more interested in pranks than in studying ninjutsu.. but Naruto is determined to become the greatest ninja ever!",
-      "poster_url": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/vauCEnR7CiyBDzRCeElKkCaXIYu.jpg",
+      "posterUrl": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/vauCEnR7CiyBDzRCeElKkCaXIYu.jpg",
       "genre": "Animation, Action & Adventure, Sci-Fi & Fantasy",
       "rating": "8.4"
     },
@@ -60,7 +60,7 @@
       "id": "71712",
       "title": "The Good Doctor",
       "overview": "A young surgeon with Savant syndrome is recruited into the surgical unit of a prestigious hospital. The question will arise: can a person who doesn't have the ability to relate to people actually save their lives.",
-      "poster_url": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/6tfT03sGp9k4c0J3dypjrI8TSAI.jpg",
+      "posterUrl": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/6tfT03sGp9k4c0J3dypjrI8TSAI.jpg",
       "genre": "Drama",
       "rating": "8.6"
     },
@@ -68,7 +68,7 @@
       "id": "86430",
       "title": "Your Honor",
       "overview": "New Orleans judge Michael Desiato is forced to confront his own deepest convictions when his son is involved in a hit and run that embroils an organized crime family.",
-      "poster_url": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/xWJZjIKPeEZhK3JRYKOe06yW6IU.jpg",
+      "posterUrl": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/xWJZjIKPeEZhK3JRYKOe06yW6IU.jpg",
       "genre": "Drama",
       "rating": "8.2"
     },
@@ -76,7 +76,7 @@
       "id": "456",
       "title": "The Simpsons",
       "overview": "Set in Springfield, the average American town, the show focuses on the antics and everyday adventures of the Simpson family; Homer, Marge, Bart, Lisa and Maggie, as well as a virtual cast of thousands. Since the beginning, the series has been a pop culture icon, attracting hundreds of celebrities to guest star. The show has also made name for itself in its fearless satirical take on politics, media and American life in general.",
-      "poster_url": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/zLudbPueg8CxGhMS2tyDh3p0TdK.jpg",
+      "posterUrl": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/zLudbPueg8CxGhMS2tyDh3p0TdK.jpg",
       "genre": "Family, Animation, Comedy",
       "rating": "7.8"
     }
