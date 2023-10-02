@@ -11,6 +11,7 @@ android {
     defaultConfig {
         applicationId "com.suryasa.moviejetpack"
         minSdkVersion 21
+        //noinspection ExpiredTargetSdkVersion
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
@@ -65,4 +66,6 @@ dependencies {
     androidTestImplementation "androidx.test.espresso:espresso-contrib:$espressoVersion"
     androidTestImplementation "androidx.test:runner:$androidXTestVersion"
     androidTestImplementation "androidx.test:rules:$androidXTestVersion"
+
+    annotationProcessor "androidx.room:room-compiler:2.4.0-alpha03"
 }
